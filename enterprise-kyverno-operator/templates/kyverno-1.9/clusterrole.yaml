@@ -192,19 +192,4 @@ rules:
   - update
   - watch
   - deletecollection
-# ---
-# apiVersion: rbac.authorization.k8s.io/v1
-# kind: ClusterRole
-# metadata:
-#   name: kyverno:create-upstreams
-#   labels:
-#     {{- include "kyverno19.labels" . | nindent 4 }}
-#     app: kyverno
-# rules:
-# - apiGroups:
-#   - gloo.solo.io
-#   resources:
-#   - upstreams
-#   verbs:
-#   - create
 {{- end }}
